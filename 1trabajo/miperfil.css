@@ -1,0 +1,62 @@
+.div_info{
+    margin: auto;
+    width: 40%;
+    padding: 20px;
+    border: 1px solid #F0F8FF;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+
+}
+hr{
+    height: 2px;
+    background-color: black;
+}
+
+.perfil{
+    text-align: center;
+    margin: 0;
+    
+}
+h2{
+    color:#3498DB;
+}
+
+.div_informacion{
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    border: 1px solid grey;
+    background-color: #F0F8FF;
+    border-radius: 10px;
+    
+    
+   
+
+}
+.div_hobbies{
+    margin: 0px;
+    padding: 20px;
+    border: 1px solid  #F9A825;
+    background-color: #FFF3E0;
+    border-radius: 10px;
+    
+}
+    
+body{
+    background-color: rgba(128, 128, 128, 0.192);
+}
+ul{
+    padding: 20px;
+}
+
+.div_contacto{
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    border: 1px solid #81C784;
+    background-color: #E8F5E9;
+    border-radius: 10px;
+    
+}
+.color{
+    color: #8B9F3F;
+}

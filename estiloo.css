@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    background: linear-gradient(to right, #f6f1f1, #eaeaea);
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0px;
+    color: #6A0572;
+    text-align: center;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.pro {
+    text-align: center;
+    color: #9D4EDD;
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.misproyectos {
+    border: 2px solid #6A0572;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #FFDEE9, #B5FFFC);
+    width: 60%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.misproyectos p {
+    font-size: 16px;
+    color: #4A4A4A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.misproyectos a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(to right, #6A0572, #9D4EDD);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.misproyectos a:hover {
+    background: #5A189A;
+}
+
+
+@media (max-width: 1000px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .misproyectos {
+        width: 80%;
+        height: 140px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pro {
+        font-size: 24px;
+    }
+    .misproyectos {
+        width: 90%;
+        padding: 8px;
+        height: 120px;
+    }
+    .misproyectos p {
+        font-size: 14px;
+    }
+    .misproyectos a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .pro {
+        font-size: 20px;
+    }
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 5px;
+    }
+    .misproyectos {
+        width: 95%;
+        padding: 5px;
+        font-size: 12px;
+        height: 100px;
+    }
+    .misproyectos p {
+        font-size: 12px;
+    }
+    .misproyectos a {
+        font-size: 10px;
+    }
+}
+
+
+
