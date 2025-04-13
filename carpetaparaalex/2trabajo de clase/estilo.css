@@ -1,0 +1,86 @@
+.contenedor{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3px;
+    padding: 50px;
+    margin: 5px;
+    background-color:#1D202B;
+    border-radius: 10px;
+   
+    
+   
+   
+}
+
+*{
+    margin: 0;
+}
+
+
+.contenedor-conciertos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    margin: 10px;
+  
+    
+}
+
+
+.card{
+    height: 300px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+
+.textos{
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    height: 70%;
+    padding: 20px;
+
+   
+    
+}
+.banner{
+    height: 600px; 
+    margin: 10px;
+    border-radius: 10px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+}
+
+h3{
+    color: white;
+   
+}
+
+ul{
+    color: white;
+    padding: 0;
+}
+
+li{
+    padding: 15px;
+    list-style: none;
+}
+
+button{
+    border-radius: 20px;
+    padding: 10px;
+    width: 80%;
+    background-color: yellow;
+    
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

@@ -1,0 +1,926 @@
+/* Estilos base (para pantallas mayores a 1000px) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #fff8e7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub1 {
+    display: flex;
+    gap: 15px;
+}
+
+.bot1, .bot2, .bot3, .bot4, .bot5, .bot6 {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    padding: 3px 8px;
+}
+
+.contenedor2 {
+    background-image: url('img/cafe.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.texto {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    color: white;
+    text-align: left;
+    max-width: 500px;
+}
+
+.texto h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.parrafo p {
+    font-size: 0.9rem;       
+    line-height: 1.5;        
+    margin-bottom: 25px;     
+    padding-right: 15px;    
+    text-align: justify;    
+    letter-spacing: 0.3px;
+}
+
+.botones {
+    display: flex;
+    gap: 15px;
+}
+
+.boo1, .boo2 {
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+}
+
+.boo1 {
+    background-color: white;
+    color: black;
+    margin-right: 10px;
+}
+
+.boo2 {
+    background-color: orange;
+    color: white;
+}
+
+.h1 {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 2rem;
+}
+
+.contenedor3 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+    display: flex;
+}
+
+.elem1, .elem2, .elem3, .elem4 {
+    width: 25%;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.elem1, .elem2, .elem3 {
+    border-right: 2px solid orange;
+}
+
+.contenedor3 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.contenedor3 h4 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.contenedor3 p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.split-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+
+.coffee-side {
+    width: 50%;
+    background: #6F4E37;
+    display: flex; 
+    align-items: center; 
+    padding-left: 30px; 
+    position: relative;
+}
+
+.coffee-content {
+    width: 60%; 
+    color: white; 
+}
+
+.coffee-img {
+    height: 100%; 
+    width: auto; 
+    position: absolute;
+    right: 0px; 
+}
+
+.coffee-side h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.coffee-side h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.coffee-side p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    max-width: 90%;
+}
+
+.coffee-side button {
+    background: white;
+    color: #6F4E37;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+}
+
+.beige-side {
+    width: 50%;
+    background: #fff8e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.beige-side h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.beige-side h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.beige-side p {
+    font-size: 0.9em;
+    max-width: 60%;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.beige-side button {
+    background: #3e2c20f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 20px;
+}
+
+.containerrr {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.botonn3 {
+    background-color: white;
+    color: black;
+    border: rgba(128, 128, 128, 0.363) solid 2px;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.botonn.primary {
+    background-color: #4b2e22;
+    color: #fff;
+    border: #3a2c2a solid 2px;
+    border-radius: 20px;
+    width: 120px;
+}
+
+.intro {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    padding-left: 90px; 
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #b4814b;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.intro p {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.botonn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ece0d1;
+    color: #3e2e1c;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menuuu {
+    flex: 2;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menuuu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    text-align: center;
+    width: 160px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.contenedor4 {
+    background-image: url('img/fondooo.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.texxto {
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    color: white;
+    text-align: left;
+    max-width: 400px;
+}
+
+.texxto h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.parrafo1 p {
+    font-size: 0.9rem;               
+    margin-bottom: 10px;     
+    line-height: 200%; 
+}
+
+.but {
+    background-color: #4b2e22;
+    color: #fff;
+    border: #3a2c2a solid 2px;
+    width: 150px;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+}
+
+.contenedor5 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.eleme1, .eleme2, .eleme3 {
+    display: flex;
+    padding: 30px 20px;
+    align-items: center;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.contenedor5 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.eleme1, .eleme2 {
+    border-right: 2px solid orange;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+}
+
+.eleme3 {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor5 h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+}
+
+.contenedor5 p {
+    font-size: 0.74rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.wooted-bar {
+    background-color: #804000;
+    padding: 14px 0;
+}
+
+.wooted-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.wooted-left {
+    display: flex;
+    align-items: center;
+    width: 33%;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.wooted-title {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.wooted-email {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.wooted-center {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.red { background-color: #FF5733; }
+.green { background-color: #33FF57; }
+.blue { background-color: #3357FF; }
+.purple { background-color: #F033FF; }
+
+.wooted-right {
+    display: flex;
+    gap: 12px;
+    width: 33%;
+    justify-content: flex-end;
+}
+
+.wooted-right button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+}
+
+.obtener {
+    background-color: white;
+    color: #0b0c0c;
+}
+
+.enviar {
+    background-color: #ff8000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos base (para pantallas mayores a 1000px) */
+/* [Tus estilos base originales aquí] */
+
+/* Media Queries organizadas de mayor a menor */
+
+/* Para pantallas entre 768px y 1000px */
+@media (max-width: 1000px) {
+    .texto {
+        left: 50px;
+        max-width: 400px;
+    }
+    
+    .texto h1 {
+        font-size: 2.5rem;
+    }
+    
+    .texto h2 {
+        font-size: 2rem;
+    }
+    
+    .contenedor3 {
+        flex-wrap: wrap;
+    }
+    
+    .elem1, .elem2, .elem3, .elem4 {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    
+    .elem2 {
+        border-right: none;
+    }
+    
+    .split-container {
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .coffee-side, .beige-side {
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .coffee-img {
+        position: relative;
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .containerrr {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .intro {
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+    
+    /* Contenedor5 mejorado */
+    .contenedor5 {
+        flex-wrap: wrap;
+        padding: 30px 20px;
+    }
+    
+    .eleme1, .eleme2, .eleme3 {
+        width: 100%;
+        border-right: none;
+        justify-content: flex-start;
+        text-align: left;
+        padding: 20px 10px;
+        height: auto;
+        border-bottom: 1px solid orange;
+    }
+    
+    .eleme3 {
+        border-bottom: none;
+    }
+    
+    .contenedor5 img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+    
+    /* Wooted-content mejorado */
+    .wooted-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .wooted-left, .wooted-center, .wooted-right {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .wooted-left {
+        order: 1;
+    }
+    
+    .wooted-center {
+        order: 3;
+    }
+    
+    .wooted-right {
+        order: 2;
+        margin-bottom: 15px;
+        flex-direction: row;
+    }
+    
+    .wooted-right button {
+        margin: 0 5px;
+    }
+}
+
+/* Para pantallas entre 480px y 767px */
+@media (max-width: 767px) {
+    .menu {
+        width: 90%;
+    }
+    
+    .sub1 {
+        gap: 10px;
+    }
+    
+    .bot1, .bot2, .bot3, .bot4, .bot5, .bot6 {
+        font-size: 16px;
+        padding: 3px 5px;
+    }
+    
+    .contenedor2 {
+        height: 500px;
+    }
+    
+    .texto {
+        top: 80px;
+        left: 30px;
+        max-width: 300px;
+    }
+    
+    .texto h1 {
+        font-size: 2rem;
+    }
+    
+    .texto h2 {
+        font-size: 1.5rem;
+    }
+    
+    .parrafo p {
+        font-size: 0.8rem;
+    }
+    
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .elem1, .elem2, .elem3, .elem4 {
+        width: 100%;
+        border-right: none;
+    }
+    
+    .contenedor3 img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .texxto {
+        left: 30px;
+        max-width: 300px;
+    }
+    
+    .texxto h1 {
+        font-size: 2rem;
+    }
+    
+    .cards {
+        gap: 15px;
+    }
+    
+    .card {
+        width: 140px;
+    }
+    
+    /* Contenedor5 ajustado */
+    .contenedor5 {
+        padding: 25px 15px;
+    }
+    
+    .eleme1, .eleme2, .eleme3 {
+        padding: 18px 0;
+    }
+    
+    .contenedor5 img {
+        width: 55px;
+        height: 55px;
+    }
+    
+    /* Wooted-content ajustado */
+    .wooted-right button {
+        padding: 7px 14px;
+        font-size: 13px;
+    }
+}
+
+/* Para pantallas entre 400px y 479px */
+@media (max-width: 479px) {
+    nav {
+        height: auto;
+        padding: 10px 0;
+    }
+    
+    .menu {
+        flex-direction: column;
+    }
+    
+    .sub1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 5px;
+    }
+    
+    .contenedor2 {
+        height: 450px;
+    }
+    
+    .texto {
+        top: 70px;
+        left: 20px;
+        max-width: 85%;
+    }
+    
+    .h1 {
+        font-size: 1.8rem;
+        padding: 25px 0;
+    }
+    
+    /* Contenedor5 optimizado */
+    .contenedor5 {
+        padding: 20px 10px;
+    }
+    
+    .eleme1, .eleme2, .eleme3 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .contenedor5 img {
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    
+    /* Wooted-content optimizado */
+    .wooted-bar {
+        padding: 15px 0;
+    }
+    
+    .wooted-content {
+        padding: 0 10px;
+        gap: 12px;
+    }
+    
+    .wooted-title {
+        font-size: 14px;
+    }
+    
+    .wooted-email {
+        font-size: 12px;
+    }
+    
+    .wooted-right {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .wooted-right button {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Para pantallas entre 302px y 399px */
+@media (max-width: 399px) {
+    .bot1, .bot2, .bot3, .bot4, .bot5, .bot6 {
+        font-size: 14px;
+        padding: 2px 4px;
+    }
+    
+    .contenedor2 {
+        height: 400px;
+    }
+    
+    .texto h1 {
+        font-size: 1.8rem;
+    }
+    
+    .texto h2 {
+        font-size: 1.3rem;
+    }
+    
+    .boo1, .boo2 {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Contenedor5 ultra compacto */
+    .contenedor5 {
+        padding: 15px 5px;
+    }
+    
+    .eleme1, .eleme2, .eleme3 {
+        padding: 12px 0;
+    }
+    
+    .contenedor5 img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .contenedor5 h4 {
+        font-size: 0.95rem;
+    }
+    
+    .contenedor5 p {
+        font-size: 0.65rem;
+    }
+    
+    /* Wooted-content ultra compacto */
+    .wooted-title {
+        font-size: 13px;
+    }
+    
+    .wooted-email {
+        font-size: 11px;
+    }
+    
+    .wooted-right button {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    .circle {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
