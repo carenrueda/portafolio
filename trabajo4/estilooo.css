@@ -133,14 +133,14 @@ h1 {
     width: 100vw;
     max-width: 100%;
     margin: 0;
-    height: 80vh;
+    
 }
 
 .hijo1,
 .hijo2,
 .hijo3 {
     background-color: #f8f8f8;
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -150,7 +150,7 @@ h1 {
 
 h2 {
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     align-self: center;
 }
 
@@ -161,6 +161,11 @@ h2 {
     border: none;
     margin-bottom: 10px;
     align-self: center;
+}
+
+.parrafo{
+    font-size: 20px;
+    width: 90%;
 }
 
 .infor {
@@ -216,6 +221,7 @@ button:hover {
 .parrafo1 {
     font-size: 25px;
     margin-bottom: 20px;
+    
 }
 
 .hijo3 p {
@@ -239,7 +245,6 @@ button:hover {
 .linea1 {
     margin-bottom: 20px;
     margin-left: 0;
-
     width: 115%;
     margin-left: auto;
     margin-right: 0;
@@ -293,7 +298,7 @@ button:hover {
     background-color: rgb(8, 152, 248);
     margin: 10px 0;
     position: relative;
-    left: 25px;
+    
 }
 
 .resume {
@@ -312,9 +317,15 @@ button:hover {
 
 .linea {
     width: 40px;
-    margin-left: 5px;
-    height: 2px;
+    margin-left: 30px;
+    height: 3px;
     background-color: rgb(8, 152, 248);
+}
+.lineaq{
+    width: 40px;
+    height: 3px;
+    background-color: rgb(8, 152, 248);
+    border: none;
 }
 
 .p2 {
