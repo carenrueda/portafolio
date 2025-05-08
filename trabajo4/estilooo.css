@@ -587,7 +587,7 @@ button:hover {
     }
 
     .profile-container img {
-        width: 120px;
+        width: 130px;
         border-width: 8px;
     }
 
@@ -636,7 +636,7 @@ button:hover {
     }
 
     .profile-container img {
-        width: 120px;
+        width: 130px;
         border-width: 6px;
     }
 
@@ -710,7 +710,7 @@ button:hover {
     }
 
     .profile-container img {
-        width: 120px;
+        width: 130px;
         border-width: 4px;
     }
 
@@ -731,8 +731,193 @@ button:hover {
 }
 
 
-@media (max-width:320px){
+@media (max-width: 320px) {
+    
+
+    .profile-container img {
+        width: 130px; 
+        border-width: 5px; 
+    }
+    
+    body {
+        overflow-x: hidden;
+        min-width: 320px;
+    }
+    
+    .header {
+        height: auto;
+        min-height: 300px;
+        padding-bottom: 20px;
+    }
+
+
+    .contenedor {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .menu1 {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .menu-item {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+
+
     .profile-container img {
         width: 130px;
+        border-width: 4px;
+        margin-top: 10px;
+    }
+
+
+    .nombre {
+        margin: 2rem 1rem 1rem;
+    }
+
+    h1 {
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .sub {
+        font-size: 14px;
+    }
+
+    .link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+
+    .hijo1, .hijo2, .hijo3 {
+        padding: 20px 15px;
+    }
+
+    .parrafo {
+        font-size: 16px;
+        width: 100%;
+    }
+
+
+    .resume-section {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    .tex1, .tex2, .tex3, .tex4, .tex5 {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+
+    .tituloo img, .titulo2 img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card6 {
+        width: 100%;
+    }
+
+    .hobbies {
+        justify-content: space-around;
+    }
+
+    .hobby {
+        width: 45%;
+        margin: 5px 0;
+    }
+
+    
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+
+    * {
+        max-width: 100%;
+    }
+}
+
+
+
+
+@media (min-width: 321px) and (max-width: 339px) {
+    
+    body, html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .contenedor {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    .header {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    .menu1 {
+        width: 100vw;
+    }
+    
+    .menu-item {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+
+    .hijo1, .hijo2, .hijo3 {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    
+
+    .resume-section {
+        grid-template-columns: 1fr;
+        width: 100vw;
+        padding: 0 10px;
+    }
+    
+    .tex1, .tex2, .tex3, .tex4, .tex5 {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 15px;
+    }
+    
+
+    .profile-container img {
+        max-width: 130px;
+    }
+    
+    .link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    
+    * {
+        max-width: 100%;
+    }
+    
+    
+    .nombre, .info {
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
