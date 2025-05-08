@@ -625,7 +625,7 @@ button:hover {
     }
 
     .profile-container img {
-        width: 100px;
+        width: 120px;
         border-width: 6px;
     }
 
@@ -699,7 +699,7 @@ button:hover {
     }
 
     .profile-container img {
-        width: 70px;
+        width: 120px;
         border-width: 4px;
     }
 
@@ -716,5 +716,12 @@ button:hover {
     .linea2,
     .linea3 {
         width: 50px;
+    }
+}
+
+
+@media (max-width:320px){
+    .profile-container img {
+        width: 130px;
     }
 }
