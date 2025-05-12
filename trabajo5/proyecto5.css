@@ -1,10 +1,9 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 html, body {
     width: 100%;
@@ -13,7 +12,7 @@ html, body {
 }
 
 nav {
-    background-color: #fff8e7;
+    background-color: #E2BD94;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,7 +39,7 @@ nav {
 .bot1, .bot2, .bot3, .bot4, .bot5, .bot6 {
     text-decoration: none;
     color: #000;
-    font-family: 'Caveat', cursive;
+    font-family:  "Roboto Slab", serif;
     font-size: 18px;
     padding: 3px 8px;
 }
@@ -58,7 +57,7 @@ nav {
 .texto {
     position: absolute;
     top: 120px;
-    left: 100px;
+    left: 10%;
     color: white;
     text-align: left;
     max-width: 500px;
@@ -102,7 +101,7 @@ nav {
 }
 
 .boo2 {
-    background-color: orange;
+    background-color: #C56421;
     color: white;
 }
 
@@ -122,7 +121,7 @@ nav {
 
 .elem1, .elem2, .elem3, .elem4 {
     width: 25%;
-    padding: 0 20px;
+    padding: 0 25px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -162,12 +161,12 @@ nav {
     background: #6F4E37;
     display: flex; 
     align-items: center; 
-    padding-left: 30px; 
+    padding-left: 10%; 
     position: relative;
 }
 
 .coffee-content {
-    width: 60%; 
+    width: 40%; 
     color: white; 
 }
 
@@ -179,12 +178,12 @@ nav {
 }
 
 .coffee-side h1 {
-    font-size: 2.5em;
+    font-size: 2.1em;
     margin-bottom: 10px;
 }
 
 .coffee-side h2 {
-    font-size: 2.5em;
+    font-size: 2.1em;
     margin-bottom: 10px;
 }
 
@@ -192,7 +191,7 @@ nav {
     font-size: 0.9em;
     margin-bottom: 20px;
     line-height: 1.4;
-    max-width: 90%;
+    width:110% ;
 }
 
 .coffee-side button {
@@ -213,6 +212,7 @@ nav {
     align-items: center;
     text-align: center;
     padding: 20px;
+    padding-right: 7%;
     box-sizing: border-box;
 }
 
@@ -231,7 +231,7 @@ nav {
 
 .beige-side p {
     font-size: 0.9em;
-    max-width: 60%;
+    max-width: 85%;
     margin-bottom: 20px;
     color: #666;
 }
@@ -243,6 +243,7 @@ nav {
     padding: 10px 20px;
     font-size: 1em;
     border-radius: 20px;
+    width: 25%;
 }
 
 .containerrr {
@@ -273,6 +274,7 @@ nav {
     max-width: 500px;
     text-align: center;
     padding-left: 90px; 
+    padding-left: 9%;
 }
 
 .label {
@@ -281,12 +283,12 @@ nav {
 }
 
 .intro h1 {
-    font-size: 2rem;
-    margin: 10px 0;
+    font-size: 2.5rem;
+    padding-right: 25px;
 }
 
 .intro p {
-    margin: 20px 0;
+    margin: 10px 0;
     line-height: 1.5;
 }
 
@@ -305,9 +307,7 @@ nav {
     border-radius: 4px;
 }
 
-.menuuu {
-    flex: 2;
-}
+
 
 .cont {
     display: flex;
@@ -319,14 +319,16 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
+
 }
 
 .cards {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 40px;
+    
 }
 
 .card {
@@ -335,7 +337,7 @@ nav {
 }
 
 .card img {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -361,7 +363,7 @@ nav {
 .texxto {
     position: absolute;
     top: 80px;
-    left: 100px;
+    left: 10%;
     color: white;
     text-align: left;
     max-width: 400px;
@@ -391,75 +393,92 @@ nav {
 
 .contenedor5 {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 50px;
     display: flex;
     justify-content: center;
+    background: #f9f9f9;
 }
+
 
 .eleme1, .eleme2, .eleme3 {
     display: flex;
-    padding: 30px 20px;
+    padding: 20px; 
     align-items: center;
-    width: 25%;
+    width: 29%; 
+    max-width: 400px; 
+    min-width: 250px; 
     box-sizing: border-box;
 }
 
-.contenedor5 img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 15px;
+
+.eleme1 {
+    border-right: 2px solid orange;
+    padding-right: 20px; 
+    margin-right: 20px; 
 }
 
-.eleme1, .eleme2 {
+.eleme2 {
     border-right: 2px solid orange;
-    height: 100px; 
-    display: flex;
-    align-items: center;
+    padding-right: 20px;
+    margin-right: 20px;
+    padding-left: 0; 
 }
 
 .eleme3 {
-    height: 100px;
-    display: flex;
-    align-items: center;
+    padding-left: 0;
+}
+
+.contenedor5 img {
+    width: 70px; 
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px; 
+}
+
+.text-content {
+    flex: 1;
 }
 
 .contenedor5 h4 {
-    margin: 0 0 5px 0;
+    margin: 0 0 12px 0;
     font-size: 1.3rem;
 }
 
 .contenedor5 p {
-    font-size: 0.74rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
     margin: 0;
-    text-align: left;
 }
 
-.text-content {
-    display: flex;
-    flex-direction: column;
+.contenedor5 h4 {
+    margin: 0 0 15px 0;
+    font-size: 1.4rem;
 }
 
-.wooted-bar {
+.contenedor5 p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 100%;
+}
+.ted-bar {
     background-color: #804000;
     padding: 14px 0;
 }
 
-.wooted-content {
+
+.ted-content {
     max-width: 1200px;
+    padding: 0 54px;
     margin: 0 auto;
-    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    
 }
 
-.wooted-left {
+.ted-left {
     display: flex;
     align-items: center;
     width: 33%;
@@ -470,7 +489,7 @@ nav {
     flex-direction: column;
 }
 
-.wooted-title {
+.ted-title {
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -478,14 +497,14 @@ nav {
     line-height: 1.4;
 }
 
-.wooted-email {
+.ted-email {
     color: white;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
 }
 
-.wooted-center {
+.ted-center {
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -504,14 +523,14 @@ nav {
 .blue { background-color: #3357FF; }
 .purple { background-color: #F033FF; }
 
-.wooted-right {
+.ted-right {
     display: flex;
     gap: 12px;
     width: 33%;
     justify-content: flex-end;
 }
 
-.wooted-right button {
+.ted-right button {
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
@@ -534,25 +553,17 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
+    .menu {
+        width: 90%;
+    }
+    
+    .contenedor2 {
+        height: 600px;
+    }
+    
     .texto {
-        left: 50px;
+        top: 80px;
         max-width: 400px;
     }
     
@@ -570,6 +581,7 @@ nav {
     
     .elem1, .elem2, .elem3, .elem4 {
         width: 50%;
+        padding: 0 15px;
         margin-bottom: 30px;
     }
     
@@ -578,21 +590,49 @@ nav {
     }
     
     .split-container {
-        height: auto;
         flex-direction: column;
+        height: auto;
     }
     
-    .coffee-side, .beige-side {
+
+    .coffee-side {
         width: 100%;
-        height: auto;
-        padding: 40px 20px;
+        min-height: 500px;
+        position: relative;
+        padding: 40px 10%;
+    }
+    
+    .coffee-content {
+        position: relative;
+        z-index: 3;
+        color: white;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        width: 60%;
     }
     
     .coffee-img {
-        position: relative;
-        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
         object-fit: cover;
+        z-index: 1;
+    }
+    
+    .coffee-side button {
+        position: relative;
+        z-index: 3;
+    }
+
+    
+    .beige-side {
+        width: 100%;
+        padding: 40px 10%;
+    }
+    
+    .beige-side button {
+        width: 40%;
     }
     
     .containerrr {
@@ -605,19 +645,15 @@ nav {
         margin-bottom: 30px;
     }
     
-
     .contenedor5 {
         flex-wrap: wrap;
-        padding: 30px 20px;
     }
     
     .eleme1, .eleme2, .eleme3 {
         width: 100%;
         border-right: none;
-        justify-content: flex-start;
-        text-align: left;
-        padding: 20px 10px;
-        height: auto;
+        margin-right: 0;
+        padding: 15px 0;
         border-bottom: 1px solid orange;
     }
     
@@ -625,50 +661,73 @@ nav {
         border-bottom: none;
     }
     
-    .contenedor5 img {
-        width: 60px;
-        height: 60px;
-        margin-right: 10px;
-    }
-    
-
-    .wooted-content {
+    .ted-content {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
     }
     
-    .wooted-left, .wooted-center, .wooted-right {
+    .ted-left, .ted-center, .ted-right {
         width: 100%;
         justify-content: center;
-        text-align: center;
-    }
-    
-    .wooted-left {
-        order: 1;
-    }
-    
-    .wooted-center {
-        order: 3;
-    }
-    
-    .wooted-right {
-        order: 2;
-        margin-bottom: 15px;
-        flex-direction: row;
-    }
-    
-    .wooted-right button {
-        margin: 0 5px;
     }
 }
 
 
-@media (max-width: 767px) {
-    .menu {
-        width: 90%;
+@media (max-width: 700px) {
+    .contenedor2 {
+        height: 500px;
     }
     
+    .texto {
+        top: 60px;
+        max-width: 350px;
+    }
+    
+    .texto h1 {
+        font-size: 2.2rem;
+    }
+    
+    .texto h2 {
+        font-size: 1.8rem;
+    }
+    
+    .parrafo p {
+        font-size: 0.8rem;
+    }
+    
+    .boo1, .boo2 {
+        padding: 8px 20px;
+    }
+    
+    .contenedor3 img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .contenedor3 h4 {
+        font-size: 1.3rem;
+    }
+    
+    .beige-side h1 {
+        font-size: 2.5em;
+    }
+    
+    .beige-side h3 {
+        font-size: 1.3em;
+    }
+    
+    .card {
+        width: 140px;
+    }
+    
+    .texxto h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 600px) {
     .sub1 {
         gap: 10px;
     }
@@ -679,12 +738,11 @@ nav {
     }
     
     .contenedor2 {
-        height: 500px;
+        height: 450px;
     }
     
     .texto {
-        top: 80px;
-        left: 30px;
+        top: 50px;
         max-width: 300px;
     }
     
@@ -693,11 +751,7 @@ nav {
     }
     
     .texto h2 {
-        font-size: 1.5rem;
-    }
-    
-    .parrafo p {
-        font-size: 0.8rem;
+        font-size: 1.6rem;
     }
     
     .botones {
@@ -708,15 +762,38 @@ nav {
     .elem1, .elem2, .elem3, .elem4 {
         width: 100%;
         border-right: none;
+        padding: 0 10px;
     }
     
-    .contenedor3 img {
-        width: 80px;
-        height: 80px;
+    .elem1, .elem2, .elem3 {
+        border-bottom: 1px solid orange;
+        padding-bottom: 20px;
+    }
+    
+    .elem4 {
+        padding-top: 20px;
+    }
+    
+    /* Ajuste adicional para texto sobre imagen */
+    .coffee-side p {
+        width: 100%;
+    }
+    
+    .beige-side button {
+        width: 60%;
+    }
+    
+    .intro h1 {
+        font-size: 2rem;
+        padding-right: 0;
+    }
+    
+    .card {
+        width: 120px;
     }
     
     .texxto {
-        left: 30px;
+        top: 50px;
         max-width: 300px;
     }
     
@@ -724,124 +801,105 @@ nav {
         font-size: 2rem;
     }
     
-    .cards {
-        gap: 15px;
-    }
-    
-    .card {
-        width: 140px;
-    }
-    
-    
-    .contenedor5 {
-        padding: 25px 15px;
-    }
-    
-    .eleme1, .eleme2, .eleme3 {
-        padding: 18px 0;
-    }
-    
-    .contenedor5 img {
-        width: 55px;
-        height: 55px;
-    }
-    
-    
-    .wooted-right button {
-        padding: 7px 14px;
-        font-size: 13px;
+    .parrafo1 p {
+        font-size: 0.9rem;
     }
 }
 
 
-@media (max-width: 479px) {
+@media (max-width: 500px) {
     nav {
-        height: auto;
-        padding: 10px 0;
+        height: 90px;
     }
     
     .menu {
         flex-direction: column;
+        justify-content: center;
+        gap: 5px;
     }
     
     .sub1 {
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 5px;
-    }
-    
-    .contenedor2 {
-        height: 450px;
-    }
-    
-    .texto {
-        top: 70px;
-        left: 20px;
-        max-width: 85%;
-    }
-    
-    .h1 {
-        font-size: 1.8rem;
-        padding: 25px 0;
-    }
-    
-    
-    .contenedor5 {
-        padding: 20px 10px;
-    }
-    
-    .eleme1, .eleme2, .eleme3 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 15px 0;
-    }
-    
-    .contenedor5 img {
-        width: 50px;
-        height: 50px;
-        margin-right: 0;
-        margin-bottom: 8px;
-    }
-    
-    
-    .wooted-bar {
-        padding: 15px 0;
-    }
-    
-    .wooted-content {
-        padding: 0 10px;
-        gap: 12px;
-    }
-    
-    .wooted-title {
-        font-size: 14px;
-    }
-    
-    .wooted-email {
-        font-size: 12px;
-    }
-    
-    .wooted-right {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .wooted-right button {
-        width: 100%;
-        margin: 0;
-    }
-}
-
-
-@media (max-width: 399px) {
-    .bot1, .bot2, .bot3, .bot4, .bot5, .bot6 {
-        font-size: 14px;
-        padding: 2px 4px;
+        gap: 5px 10px;
     }
     
     .contenedor2 {
         height: 400px;
+        margin-top: 60px;
+    }
+    
+    .texto {
+        top: 40px;
+        left: 5%;
+        max-width: 90%;
+    }
+    
+    .h1 {
+        font-size: 1.8rem;
+        padding: 30px 0;
+    }
+    .coffee-side {
+        padding-left: 5%;
+    }
+    
+    .coffee-content {
+        width: 70%;
+    }
+    
+    .beige-side {
+        padding: 30px 5%;
+    }
+    
+    .beige-side h1 {
+        font-size: 2em;
+    }
+    
+    .beige-side h3 {
+        font-size: 1.2em;
+    }
+    
+    .beige-side button {
+        width: 80%;
+    }
+    
+    .intro {
+        padding: 0 20px;
+    }
+    
+    .buttons {
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        width: 100px;
+    }
+    
+    .texxto {
+        left: 5%;
+        max-width: 90%;
+    }
+    
+    .contenedor5 {
+        padding: 30px 20px;
+    }
+    
+    .ted-bar {
+        padding: 10px 0;
+    }
+    
+    .ted-right {
+        flex-direction: column;
+    }
+    
+    .ted-right button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedor2 {
+        height: 370px;
     }
     
     .texto h1 {
@@ -849,57 +907,210 @@ nav {
     }
     
     .texto h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    
+    .parrafo p {
+        font-size: 0.85rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
     
     .boo1, .boo2 {
-        padding: 8px 15px;
+        padding: 6px 15px;
         font-size: 0.9rem;
     }
     
-
-    .contenedor5 {
-        padding: 15px 15px;
+    .h1 {
+        font-size: 1.6rem;
+        padding: 25px 0;
     }
     
-    .eleme1, .eleme2, .eleme3 {
-        padding: 12px 0;
+    .coffee-side {
+        min-height: 400px;
     }
     
-    .contenedor5 img {
-        width: 45px;
-        height: 45px;
+    .coffee-content {
+        margin: 0 auto;
+        width: 95%;
+        
+    }
+    
+    .contenedor3 img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .contenedor3 h4 {
+        font-size: 1.2rem;
+    }
+    
+    .contenedor3 p {
+        font-size: 0.9rem;
+    }
+    
+    .coffee-side h1, .coffee-side h2 {
+        font-size: 1.em;
+    }
+    
+    .coffee-side p {
+        font-size: 0.9em;
+        font-family: 'Arial Narrow Bold', sans-serif;
+    }
+    
+    .beige-side h1 {
+        font-size: 1.8em;
+    }
+    
+    .beige-side h3 {
+        font-size: 1.1em;
+    }
+    
+    .beige-side p {
+        font-size: 0.9em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .beige-side button {
+        font-size: 0.9em;
+    }
+    
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+    
+    .texxto h1 {
+        font-size: 1.8rem;
+    }
+    
+    .but {
+        width: 130px;
+        padding: 8px 20px;
+        font-size: 0.9rem;
     }
     
     .contenedor5 h4 {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
     }
     
     .contenedor5 p {
-        font-size: 0.65rem;
+        font-size: 0.85rem;
     }
-    
-    /* Wooted-content ultra compacto */
-    .wooted-title {
-        font-size: 13px;
+    .botonn3{
+        width: 120px;
     }
-    
-    .wooted-email {
-        font-size: 11px;
-    }
-    
-    .wooted-right button {
-        padding: 5px 10px;
-        font-size: 11px;
-    }
-    
-    .circle {
-        width: 16px;
-        height: 16px;
-    }
+
 }
 
 
+@media (max-width: 300px) {
+    .bot1, .bot2, .bot3, .bot4, .bot5, .bot6 {
+        font-size: 14px;
+        padding: 2px 3px;
+    }
+    
+    .contenedor2 {
+        height: 300px;
+    }
+    
+    .texto {
+        top: 30px;
+    }
+    
+    .texto h1 {
+        font-size: 1.5rem;
+    }
+    
+    .texto h2 {
+        font-size: 1.2rem;
+    }
+    
+    .parrafo p {
+        font-size: 0.7rem;
+    }
+    
+    .h1 {
+        font-size: 1.4rem;
+        padding: 20px 0;
+    }
+    
+
+    .coffee-side {
+        min-height: 350px;
+        padding: 15px;
+    }
+    
+    .coffee-content {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .contenedor3 img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contenedor3 h4 {
+        font-size: 1.1rem;
+    }
+    
+    .coffee-side h1, .coffee-side h2 {
+        font-size: 1.5em;
+    }
+    
+    .coffee-side p {
+        font-size: 0.75em;
+    }
+    
+    .beige-side h1 {
+        font-size: 1.5em;
+    }
+    
+    .beige-side button {
+        width: 100%;
+    }
+    
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+    
+    .botonn, .botonn.primary, .botonn3 {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .texxto h1 {
+        font-size: 1.5rem;
+    }
+    
+    .parrafo1 p {
+        font-size: 0.75rem;
+    }
+    
+    .contenedor5 img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .contenedor5 h4 {
+        font-size: 1.1rem;
+    }
+    
+    .contenedor5 p {
+        font-size: 0.8rem;
+    }
+    
+    .ted-title {
+        font-size: 14px;
+    }
+    
+    .ted-email {
+        font-size: 12px;
+    }
+    
+    .ted-right button {
+        font-size: 12px;
+    }
+}
 
 
 
