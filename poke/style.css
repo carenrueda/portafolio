@@ -4,7 +4,7 @@
 }
 
 body {
-   background: url(./img/bosque.png) no-repeat center center fixed;
+   background: url(./img/fondo.png) no-repeat center center fixed;
    background-size: cover;
    padding: 20px;
    min-height: 100vh;
@@ -14,7 +14,7 @@ body {
    font-family: 'Arial', sans-serif;
 }
 
-/* Título dentro de la tarjeta */
+
 #card .titulo-container {
    text-align: center;
    margin: -15px 0 15px;
@@ -26,15 +26,16 @@ body {
    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.6));
 }
 
-/* Contenedor principal flexible */
+
 .contenedor-principal {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    gap: 20px;
    width: 90%;
 }
 
-/* Estilo para ambas tarjetas */
+
 .tarjeta {
    flex: 1;
    min-width: 300px;
@@ -48,9 +49,6 @@ body {
    transition: transform 0.3s ease;
 }
 
-
-
-/* Tarjeta izquierda (info principal) */
 #card {
    display: flex;
    flex-direction: column;
@@ -68,7 +66,7 @@ body {
    margin: 10px auto;
 }
 
-/* Tarjeta derecha  */
+
 .tarjeta-info {
    display: flex;
    flex-direction: column;
@@ -97,7 +95,7 @@ body {
    text-align: center;
 }
 
-/* Sección de tipos y debilidades */
+
 #tipo1,
 #debilidades {
    margin: 0;
@@ -110,7 +108,7 @@ body {
    gap: 8px;
 }
 
-/* Barras de estadísticas */
+
 #barras {
    margin-top: 0;
    padding: 10px;
@@ -151,7 +149,6 @@ body {
    border-radius: 10px;
 }
 
-/* Botones de tipos y debilidades */
 button {
    border: none;
    border-radius: 20px;
