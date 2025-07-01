@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas Veterinaria</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min 1.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Administrador de citas</h1>
+
+    <div class="container">
+
+        <div class="botones">
+            <div class="col-md-4">
+                <select class="form-select" id="filtroEstado">
+                    <option value="">Todas las citas</option>
+                    <option value="Abierta">Abierta</option>
+                    <option value="Terminada">Terminada</option>
+                    <option value="Anulada">Anulada</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <input type="text" class="form-control" id="busqueda" placeholder="Buscar mascota o propietario">
+            </div>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCita">
+                AGREGAR CITA
+            </button>
+        </div>
+        <br>
+        <div class="linea"></div>
+
+        <div id="citasContainer" class="row g-4 mt-3"></div>
+
+        <!-- agregar/editar citas -->
+        <div class="modal fade" id="modalCita" tabindex="-1" aria-labelledby="modalCitaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalCitaLabel">Guardar nueva cita</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formCita">
+                            <input type="hidden" id="citaId">
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label for="nombre" class="form-label">Nombre Mascota</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                    <div class="invalid-feedback">Por favor ingresa el nombre de la mascota</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="propietario" class="form-label">Propietario</label>
+                                    <input type="text" class="form-control" id="propietario" required>
+                                    <div class="invalid-feedback">Por favor ingresa el nombre del propietario</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="number" class="form-control" id="telefono" required>
+                                    <div class="invalid-feedback">Por favor ingresa un teléfono válido (solo números)
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="fecha" class="form-label">Fecha de cita</label>
+                                    <input type="date" class="form-control" id="fecha" required>
+                                    <div class="invalid-feedback">La fecha debe ser futura</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="hora" class="form-label">Hora</label>
+                                    <input type="time" class="form-control" id="hora" min="08:00" max="20:00" required>
+                                    <div class="invalid-feedback">El horario de atención es de 8:00 a.m. a 8:00 p.m.
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="tipoMascota" class="form-label">Tipo de mascota</label>
+                                    <select class="form-select" id="tipoMascota" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option>Perro</option>
+                                        <option>Gato</option>
+                                        <option>Peces</option>
+                                        <option>Conejo</option>
+                                        <option>Aves</option>
+                                        <option>Tortuga</option>
+                                        <option>Oveja</option>
+                                        <option>Cerdo</option>
+                                        <option>Caballo</option>
+                                        <option>Cabra</option>
+                                    </select>
+                                    <div class="invalid-feedback">Por favor selecciona un tipo de mascota</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="sintomas" class="form-label">Síntomas</label>
+                                    <textarea class="form-control" id="sintomas" rows="3" maxlength="400"
+                                        required></textarea>
+                                    <div class="invalid-feedback">Por favor describe los síntomas (máx. 400 caracteres)
+                                    </div>
+                                    <small class="text-muted"><span id="contadorCaracteres">0</span>/400
+                                        caracteres</small>
+                                </div>
+                                <div class="col-md-12" id="estadoContainer">
+                                    <label for="estado" class="form-label">Estado</label>
+                                    <select class="form-select" id="estado" required>
+                                        <option value="Abierta" selected>Abierta</option>
+                                        <option value="Terminada">Terminada</option>
+                                        <option value="Anulada">Anulada</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CERRAR</button>
+                        <button type="button" class="btn btn-primary" id="btnGuardar">GUARDAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- eliminar -->
+        <div class="modal fade" id="modalConfirmarEliminar" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmar eliminación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ¿Estás seguro que deseas eliminar esta cita?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="btnConfirmarEliminar">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="JS/bootstrap.bundle.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const emojisAnimales = {
+                'perro': '🐕',
+                'gato': '🐈',
+                'aves': '🐦',
+                'conejo': '🐇',
+                'hamster': '🐹',
+                'peces': '🐟',
+                'tortuga': '🐢',
+                'oveja': '🐑',
+                'cerdo': '🐖',
+                'caballo': '🐎',
+                'cabra': '🐐'
+            };
+            let citas = JSON.parse(localStorage.getItem('citas')) || [];
+            let citaAEliminar = null;
+            let proximoId = citas.length > 0 ? Math.max(...citas.map(c => c.id)) + 1 : 1;
+
+
+            const citasContainer = document.getElementById('citasContainer');
+            const formCita = document.getElementById('formCita');
+            const btnGuardar = document.getElementById('btnGuardar');
+            const btnConfirmarEliminar = document.getElementById('btnConfirmarEliminar');
+            const filtroEstado = document.getElementById('filtroEstado');
+            const busqueda = document.getElementById('busqueda');
+            const sintomasTextarea = document.getElementById('sintomas');
+            const contadorCaracteres = document.getElementById('contadorCaracteres');
+            const estadoContainer = document.getElementById('estadoContainer');
+
+
+            btnGuardar.addEventListener('click', guardarCita);
+            btnConfirmarEliminar.addEventListener('click', eliminarCita);
+            filtroEstado.addEventListener('change', renderCitas);
+            busqueda.addEventListener('input', renderCitas);
+            sintomasTextarea.addEventListener('input', actualizarContadorCaracteres);
+
+            // Inicializar la aplicación
+            renderCitas();
+
+
+            // Funciones
+            function renderCitas() {
+                const estadoFiltro = filtroEstado.value;
+                const terminoBusqueda = busqueda.value.toLowerCase();
+
+                let citasFiltradas = citas;
+
+                // Aplicar filtro por estado
+                if (estadoFiltro) {
+                    citasFiltradas = citasFiltradas.filter(cita => cita.estado === estadoFiltro);
+                }
+
+                // Aplicar búsqueda
+                if (terminoBusqueda) {
+                    citasFiltradas = citasFiltradas.filter(cita =>
+                        cita.nombre.toLowerCase().includes(terminoBusqueda) ||
+                        cita.propietario.toLowerCase().includes(terminoBusqueda)
+                    );
+                }
+
+                // Ordenar por fecha y hora
+                citasFiltradas.sort((a, b) => {
+                    const fechaA = new Date(`${a.fecha}T${a.hora}`);
+                    const fechaB = new Date(`${b.fecha}T${b.hora}`);
+                    return fechaA - fechaB;
+                });
+
+                // Limpiar el contenedor
+                citasContainer.innerHTML = '';
+
+                // Renderizar cada cita
+                citasFiltradas.forEach(cita => {
+                    const card = document.createElement('div');
+                    card.className = 'col-md-6 col-lg-4';
+
+                    let badgeClass = '';
+                    switch (cita.estado) {
+                        case 'Abierta': badgeClass = 'bg-primary'; break;
+                        case 'Terminada': badgeClass = 'bg-success'; break;
+                        case 'Anulada': badgeClass = 'bg-danger'; break;
+                    }
+
+                    // Obtener el emoji correcto
+                    const tipoMascotaLower = cita.tipoMascota.toLowerCase();
+                    const emoji = emojisAnimales[tipoMascotaLower] || emojisAnimales.default;
+
+                    card.innerHTML = `
+                <div class="card h-100 shadow-sm rounded-4 border-0">
+    <div class="card-header d-flex justify-content-between align-items-center bg-light rounded-top-4">
+        <span class="badge ${badgeClass} px-3 py-2 fs-6">${cita.estado}</span>
+        <small class="text-muted fw-semibold">#${cita.id}</small>
+    </div>
+
+    <div class="card-body">
+        <h5 class="card-title d-flex align-items-center mb-2">
+            <span style="font-size: 1.5em; margin-right: 10px;">${emoji}</span>
+            <span class="fw-bold">${cita.nombre}</span>
+        </h5>
+        <h6 class="card-subtitle mb-3 text-secondary">${cita.tipoMascota}</h6>
+
+        <p class="card-text mb-1"><strong>Propietario:</strong>
+            <span style="font-family: 'Savate', sans-serif;">${cita.propietario}</span>
+        </p>
+        <p class="card-text mb-1"><strong>Teléfono:</strong>
+            <span class="text-monospace">${cita.telefono}</span>
+        </p>
+        <p class="card-text mb-1"><strong>Fecha:</strong>
+            <span class="text-monospace">${formatearFecha(cita.fecha)}</span>
+        </p>
+        <p class="card-text mb-1"><strong>Hora:</strong>
+            <span class="text-monospace">${cita.hora}</span>
+        </p>
+        <p class="card-text"><strong>Síntomas:</strong><span class="text-monospace"> ${cita.sintomas}</span></p>
+    </div>
+
+    <div class="card-footer bg-transparent border-0 d-flex justify-content-end gap-2 pt-0">
+        <button class="btn btn-outline-primary btn-sm editar-btn" data-id="${cita.id}">
+            <i class="bi bi-pencil"></i> Editar
+        </button>
+        <button class="btn btn-outline-danger btn-sm eliminar-btn" data-id="${cita.id}">
+            <i class="bi bi-trash"></i> Eliminar
+        </button>
+    </div>
+</div>
+
+            `;
+
+                    citasContainer.appendChild(card);
+                });
+
+                // Agregar event listeners a los botones de editar y eliminar
+                document.querySelectorAll('.editar-btn').forEach(btn => {
+                    btn.addEventListener('click', () => editarCita(parseInt(btn.dataset.id)));
+                });
+
+                document.querySelectorAll('.eliminar-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        citaAEliminar = parseInt(btn.dataset.id);
+                        const modal = new bootstrap.Modal(document.getElementById('modalConfirmarEliminar'));
+                        modal.show();
+                    });
+                });
+            }
+
+               // Asegurarnos de que la fecha se interprete en hora local
+            function formatearFecha(fechaStr) {
+                const [año, mes, dia] = fechaStr.split('-');
+                const fecha = new Date(año, mes - 1, dia);
+
+                if (isNaN(fecha.getTime())) {
+                    return "Fecha inválida";
+                }
+
+                const diaLocal = fecha.getDate();
+                const mesLocal = fecha.getMonth();
+                const añoLocal = fecha.getFullYear();
+
+                const meses = [
+                    "enero", "febrero", "marzo", "abril", "mayo", "junio",
+                    "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+                ];
+
+                return `${diaLocal} de ${meses[mesLocal]} de ${añoLocal}`;
+            }
+
+            //Evita la eleccion de fechas pasadas
+            const hoy = new Date();
+            hoy.setDate(hoy.getDate() + 1);
+            const mañana = hoy.toISOString().split('T')[0];
+            document.getElementById('fecha').min = mañana;
+
+
+
+            function guardarCita() {
+
+                let valido = true;
+
+                if (!formCita.checkValidity()) {
+                    formCita.classList.add('was-validated');
+                    valido = false;
+                    return;
+                }
+
+                // Obtener valores del formulario
+                const id = parseInt(document.getElementById('citaId').value) || proximoId++;
+                const nombre = document.getElementById('nombre').value;
+                const propietario = document.getElementById('propietario').value;
+                const telefono = document.getElementById('telefono').value;
+                const fecha = document.getElementById('fecha').value;
+                const hora = document.getElementById('hora').value;
+                const tipoMascota = document.getElementById('tipoMascota').value;
+                const sintomas = document.getElementById('sintomas').value;
+                const estado = document.getElementById('estado').value;
+               
+                // Crear o actualizar la cita
+                const index = citas.findIndex(c => c.id === id);
+                const nuevaCita = {
+                    id, nombre, propietario, telefono, fecha, hora, tipoMascota, sintomas, estado
+                };
+
+                if (index === -1) {
+                    citas.push(nuevaCita);
+                } else {
+                    citas[index] = nuevaCita;
+                }
+
+                // Guardar en localStorage
+                localStorage.setItem('citas', JSON.stringify(citas));
+
+                // Cerrar modal y resetear formulario
+                const modal = bootstrap.Modal.getInstance(document.getElementById('modalCita'));
+                modal.hide();
+
+                // Resetear formulario
+                formCita.reset();
+
+                // Limpiar clases de validación (quitar bordes verdes o rojos)
+                formCita.querySelectorAll('.is-invalid').forEach(input => {
+                    input.classList.remove('is-invalid');
+                });
+
+                // Actualizar la lista de citas
+                renderCitas();
+            }
+
+            function editarCita(id) {
+                const cita = citas.find(c => c.id === id);
+                if (!cita) return;
+
+                // Llenar el formulario con los datos de la cita
+                document.getElementById('citaId').value = cita.id;
+                document.getElementById('nombre').value = cita.nombre;
+                document.getElementById('propietario').value = cita.propietario;
+                document.getElementById('telefono').value = cita.telefono;
+                document.getElementById('fecha').value = cita.fecha;
+                document.getElementById('hora').value = cita.hora;
+                document.getElementById('tipoMascota').value = cita.tipoMascota;
+                document.getElementById('sintomas').value = cita.sintomas;
+                document.getElementById('estado').value = cita.estado;
+                actualizarContadorCaracteres();
+
+                // Cambiar el título del modal
+                document.getElementById('modalCitaLabel').textContent = 'Editar cita';
+
+                // Mostrar el modal
+                const modal = new bootstrap.Modal(document.getElementById('modalCita'));
+                modal.show();
+            }
+
+            function eliminarCita() {
+                citas = citas.filter(c => c.id !== citaAEliminar);
+                localStorage.setItem('citas', JSON.stringify(citas));
+
+                const modal = bootstrap.Modal.getInstance(document.getElementById('modalConfirmarEliminar'));
+                modal.hide();
+
+                renderCitas();
+                citaAEliminar = null;
+            }
+
+            function actualizarContadorCaracteres() {
+                const longitud = sintomasTextarea.value.length;
+                contadorCaracteres.textContent = longitud;
+
+                if (longitud >= 400) {
+                    contadorCaracteres.classList.add('text-danger');
+                } else {
+                    contadorCaracteres.classList.remove('text-danger');
+                }
+            }
+
+            // Resetear el título del modal cuando se cierra
+            document.getElementById('modalCita').addEventListener('hidden.bs.modal', function () {
+                document.getElementById('modalCitaLabel').textContent = 'Nueva cita';
+                document.getElementById('citaId').value = '';
+                formCita.reset();
+                formCita.classList.remove('was-validated');
+                estadoContainer.style.display = 'block';
+            });
+
+            // Mostrar el campo de estado solo cuando se edita
+            document.getElementById('modalCita').addEventListener('show.bs.modal', function () {
+                const esEdicion = !!document.getElementById('citaId').value;
+                estadoContainer.style.display = esEdicion ? 'block' : 'none';
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

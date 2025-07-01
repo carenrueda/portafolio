@@ -1,0 +1,82 @@
+body {
+    box-sizing: border-box;
+    background-image: url(IMG/fondo1.png );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    color: rgb(114, 228, 61);
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linea {
+    border: 5px solid rgb(160, 238, 124);
+}
+
+button.btn.btn-primary {
+    padding: 10px !important;
+}
+
+.modal-header {
+    background-color: rgb(160, 238, 124);
+}
+
+.card {
+    transition: transform 0.2s;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.card-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+.badge {
+    font-size: 0.8rem;
+    padding: 0.35em 0.65em;
+}
+
+#contadorCaracteres.text-danger {
+    font-weight: bold;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    border-color: #dc3545;
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+    border-color: #198754;
+}
