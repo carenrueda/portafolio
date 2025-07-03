@@ -5,8 +5,6 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     min-height: 100vh;
-    
-    /* Mejor rendimiento en móviles */
     background-attachment: scroll;
 }
 
@@ -14,12 +12,12 @@ h1 {
     text-align: center;
     font-family: "Cherry Bomb One", system-ui;
     color: #FFFFFF;
-    font-size: 2.5rem; /* Tamaño base grande */
+    font-size: 2.5rem; 
     margin: 1rem 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Mejor legibilidad */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
 }
 
-/* Botones - Apilados verticalmente en móviles */
+
 .botones {
     display: flex;
     flex-direction: column;
@@ -39,7 +37,7 @@ h1 {
     margin: 0.5rem 0;
 }
 
-/* Ajustes para pantallas muy pequeñas (302px-575px) */
+
 @media (max-width: 575px) {
     .container, .container-fluid {
         padding-left: 10px;
@@ -106,7 +104,7 @@ h1 {
     }
 }
 
-/* Validación de formularios - Texto más pequeño en móviles */
+
 .was-validated .form-control:invalid,
 .was-validated .form-select:invalid {
     font-size: 0.9rem;
