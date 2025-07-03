@@ -1,0 +1,117 @@
+body {
+    box-sizing: border-box;
+    background-image: url(IMG/jj.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    
+    /* Mejor rendimiento en móviles */
+    background-attachment: scroll;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    color: #FFFFFF;
+    font-size: 2.5rem; /* Tamaño base grande */
+    margin: 1rem 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Mejor legibilidad */
+}
+
+/* Botones - Apilados verticalmente en móviles */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 576px) {
+    .botones {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.linea {
+    border: 4px solid #FFFFFF;
+    margin: 0.5rem 0;
+}
+
+/* Ajustes para pantallas muy pequeñas (302px-575px) */
+@media (max-width: 575px) {
+    .container, .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .modal-dialog {
+        margin: 10px auto;
+    }
+    
+    button.btn {
+        font-size: 0.9rem;
+        padding: 8px !important;
+    }
+}
+
+/* Cards - Ajustes para móviles */
+.card {
+    transition: transform 0.2s;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.card-body {
+    padding: 0.75rem;
+}
+
+.card-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+/* Botones personalizados - Ajustes para móviles */
+.btn-primary {
+    background-color: rgba(155, 89, 182, 0.1) !important;
+    border-color: rgba(155, 89, 182, 0.2);
+    font-size: 0.9rem;
+}
+
+.btn-primaryy {
+    background-color: #9dc5ee !important;
+    font-size: 0.9rem;
+}
+
+.btn-danger {
+    background-color: #e97f8a !important;
+    font-size: 0.9rem;
+}
+
+/* Ajustes específicos para 302px-400px */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 0.5rem;
+    }
+    
+    .btn {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+}
+
+/* Validación de formularios - Texto más pequeño en móviles */
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    font-size: 0.9rem;
+}
+
+#contadorCaracteres {
+    font-size: 0.8rem;
+}
